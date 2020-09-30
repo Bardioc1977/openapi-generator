@@ -14,6 +14,10 @@ import javax.ws.rs.core.MediaType;
 {{^disableMultipart}}
 import org.apache.cxf.jaxrs.ext.multipart.*;
 {{/disableMultipart}}
+{{#useBeanValidation}}
+import javax.validation.constraints.*;
+import javax.validation.Valid;
+{{/useBeanValidation}}
 
 import org.eclipse.microprofile.rest.client.annotation.RegisterProvider;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
